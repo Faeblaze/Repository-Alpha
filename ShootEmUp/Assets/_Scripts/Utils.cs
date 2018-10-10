@@ -26,4 +26,16 @@ public class Utils : MonoBehaviour
         return (b0);
     }
 	
+    public static Bounds CombineBoundsOfChilderen(GameObject go)
+    {
+        //create an empty Bounds b
+        Bounds b = new Bounds(Vector3.zero, Vector3.zero);
+        //if this GameObject has a Renderer component...
+        if (go.renderer != null)
+        {
+            //Expand b to contain the renderer's bounds
+            b = BoundsUnion(b, go.collider.bounds);
+        }
+        71
+    }
 }
