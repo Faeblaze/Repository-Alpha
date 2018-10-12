@@ -10,7 +10,9 @@ public class Main : MonoBehaviour
     public GameObject[] prefabEnemies;
     public float enemySpawnPerSecond = 0.5f; // # Enemies/second
     public float enemySpawnPadding = 1.5f; // Padding for position
-    public WeaponDefinition[] weaponDefinitions;    public WeaponType[] activeWeaponTypes;
+    public WeaponDefinition[] weaponDefinitions;
+    public WeaponType[] activeWeaponTypes;
+
     public bool ________________;
     public float enemySpawnRate; // Delay between Enemy spawns
     void Awake()
@@ -28,7 +30,8 @@ public class Main : MonoBehaviour
         foreach (WeaponDefinition def in weaponDefinitions)
         {
             W_DEFS[def.type] = def;
-        }
+        }
+
     }
     static public WeaponDefinition GetWeaponDefinition(WeaponType wt)
     {
@@ -42,7 +45,8 @@ public class Main : MonoBehaviour
         // This will return a definition for WeaponType.none,
         // which means it has failed to find the WeaponDefinition
         return (new WeaponDefinition());
-    }
+    }
+
 
     void Start()
     {
@@ -51,7 +55,8 @@ public class Main : MonoBehaviour
         {
             activeWeaponTypes[i] = weaponDefinitions[i].type;
         }
-    }
+    }
+
     public void SpawnEnemy()
     {
         // Pick a random Enemy prefab to instantiate

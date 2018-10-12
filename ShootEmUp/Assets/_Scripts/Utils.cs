@@ -255,9 +255,9 @@ public class Utils : MonoBehaviour
     static public Material[] GetAllMaterials(GameObject go)
     {
         List<Material> mats = new List<Material>();
-        if (go.renderer != null)
+        if (go.GetComponent<Renderer>() != null)
         {
-            mats.Add(go.renderer.material);
+            mats.Add(go.GetComponent<Renderer>().material);
         }
         foreach (Transform t in go.transform)
         {

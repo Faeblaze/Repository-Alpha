@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField)
+    [SerializeField]
 private WeaponType _type;
     // This public property masks the field _type & takes action when it is set
     public WeaponType type
