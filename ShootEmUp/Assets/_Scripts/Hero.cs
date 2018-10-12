@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 
 
@@ -18,7 +18,7 @@ public class Hero : MonoBehaviour
     // Ship status infomation
     [SerializeField]
     private float _shieldLevel = 1; // Add the underscore!
-    public float shieldLevel = 1;
+    
     public bool _;
     public Bounds bounds;
     private void Awake()
@@ -100,16 +100,7 @@ public GameObject lastTriggerGo = null;
             }
         }
     }
-    public void DelayedRestart(float delay)
-    {
-        // Invoke the Restart() method in delay seconds
-        Invoke("Restart", delay);
-    }
-    public void Restart()
-    {
-        // Reload _Scene_0 to restart the game
-        SceneManager.LoadScene("_Scene_0");
-    }
+   
 
 }
 
