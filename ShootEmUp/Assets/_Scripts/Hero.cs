@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
 
 public class Hero : MonoBehaviour
 {
     static public Hero S; // Singleton
 
+    public float gameRestartDelay = 2f;
     //these fields control the movement of the ship
     public float speed = 30;
     public float rollMult = -45;
     public float pitchMult = 30;
 
     // Ship status infomation
+    [SerializeField]
+    private float _shieldLevel = 1; // Add the underscore!
     public float shieldLevel = 1;
     public bool _;
     public Bounds bounds;
@@ -77,8 +83,34 @@ public GameObject lastTriggerGo = null;
                 // Otherwise announce the original other.gameObject
                 print("Triggered: " + other.gameObject.name); // Move this line here!
             }
-        }
-    
+        }    public float shieldLevel
+    {
+        get
+        {
+            return (_shieldLevel); // 1
+        }
+        set
+        {
+            _shieldLevel = Mathf.Min(value, 4); // 2
+                                                // If the shield is going to be set to less than zero
+            if (value < 0)
+            { // 3
+                Destroy(this.gameObject);
+                Main.S.DelayedRestart(gameRestartDelay);
+            }
+        }
+    }
+    public void DelayedRestart(float delay)
+    {
+        // Invoke the Restart() method in delay seconds
+        Invoke("Restart", delay);
+    }
+    public void Restart()
+    {
+        // Reload _Scene_0 to restart the game
+        SceneManager.LoadScene("_Scene_0");
+    }
+
 }
 
 

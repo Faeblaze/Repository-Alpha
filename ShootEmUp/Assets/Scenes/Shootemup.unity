@@ -159,11 +159,12 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pitchMult: 30
-  shieldLevel: 1
+  shieldLevel: 2
   _: 0
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
+  lastTriggerGo: {fileID: 0}
 --- !u!4 &85167805
 Transform:
   m_ObjectHideFlags: 0
@@ -585,7 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationsPerSecond: 0.1
   _: 0
-  levelShown: 0
+  levelShown: 1
 --- !u!135 &1665206786
 SphereCollider:
   m_ObjectHideFlags: 0
