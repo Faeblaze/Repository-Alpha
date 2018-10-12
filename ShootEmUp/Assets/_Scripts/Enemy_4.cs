@@ -14,7 +14,8 @@ public class Part
                                  // Caching like this makes it faster and easier to find these later
     public GameObject go; // The GameObject of this part
     public Material mat; // The Material to show damage
-}
+}
+
 
 public class Enemy_4 : Enemy
 {
@@ -43,7 +44,8 @@ public class Enemy_4 : Enemy
                 prt.go = t.gameObject;
                 prt.mat = prt.go.GetComponent<Renderer>().material;
             }
-        }
+        }
+
     }
     void InitMovement()
     {
@@ -198,5 +200,6 @@ public class Enemy_4 : Enemy
     {
         m.color = Color.red;
         remainingDamageFrames = showDamageForFrames;
-    }
+    }
+
 }
