@@ -14,9 +14,11 @@ public class Hero : MonoBehaviour
     // Ship status infomation
     public float shieldLevel = 1;
     public bool _;
+    public Bounds bounds;
     private void Awake()
     {
         S = this; // Set the Singleton
+        bounds = Utils.CombineBoundsOfChilderen(this.gameObject);
     }
 
     // Update is called once per frame
@@ -35,6 +37,17 @@ public class Hero : MonoBehaviour
         // Rotate the ship to make it feel more dynamic
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
 
+        bounds.center = transform.position;
+
+        //keep the ship constrained to the screen bounds
+        Vector3 off = Utils.ScreenBoundsCheck(bounds, BoundsTest.onScreen);
+        if (off != Vector3.zero)
+        {
+            pos -= off;
+            transform.position = pos;
+        }
+
     }
+
 
 }
