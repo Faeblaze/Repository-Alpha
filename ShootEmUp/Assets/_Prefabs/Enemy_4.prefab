@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4337957059798060}
   - component: {fileID: 54768223685230896}
+  - component: {fileID: 114225143847331106}
   m_Layer: 9
   m_Name: Enemy_4
   m_TagString: Enemy
@@ -37,7 +38,7 @@ GameObject:
   - component: {fileID: 4406847012562670}
   - component: {fileID: 33806901231494062}
   - component: {fileID: 23715148655851792}
-  - component: {fileID: 135271243964240832}
+  - component: {fileID: 136090292544744512}
   m_Layer: 9
   m_Name: Wing_R
   m_TagString: Untagged
@@ -55,7 +56,7 @@ GameObject:
   - component: {fileID: 4632009402394086}
   - component: {fileID: 33600487222753648}
   - component: {fileID: 23596409265125624}
-  - component: {fileID: 135852745432124510}
+  - component: {fileID: 136159409072714976}
   m_Layer: 9
   m_Name: Fuselage
   m_TagString: Untagged
@@ -73,7 +74,7 @@ GameObject:
   - component: {fileID: 4988636537918836}
   - component: {fileID: 33654026855945784}
   - component: {fileID: 23757724113808000}
-  - component: {fileID: 135674112024243698}
+  - component: {fileID: 136105696296479280}
   m_Layer: 9
   m_Name: Wing_L
   m_TagString: Untagged
@@ -351,18 +352,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!135 &135271243964240832
-SphereCollider:
+--- !u!114 &114225143847331106
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1231418613053738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1204854704567408}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5555e4977462084e98301376f8b43b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageForFrames: 2
+  powerUpDropChance: 1
+  ________________: 0
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  boundsCenterOffset: {x: 0, y: 0, z: 0}
+  parts: []
+  points: []
+  timeStart: 0
+  duration: 4
 --- !u!135 &135662902517102260
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -375,8 +393,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135674112024243698
-SphereCollider:
+--- !u!136 &136090292544744512
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1231418613053738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 1.0000002
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &136105696296479280
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -384,11 +415,12 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135852745432124510
-SphereCollider:
+--- !u!136 &136159409072714976
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -396,6 +428,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

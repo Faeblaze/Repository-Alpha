@@ -47,7 +47,8 @@ public class Weapon : MonoBehaviour
     void Awake()
     {
         collar = transform.Find("Collar").gameObject;
-    }
+    }
+
     void Start()
     {
         // Call SetType() properly for the default _type

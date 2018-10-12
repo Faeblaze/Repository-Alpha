@@ -465,8 +465,39 @@ MonoBehaviour:
   - {fileID: 1265656906597820, guid: 286094c83a2b8b0458a5a3155fe13df6, type: 2}
   enemySpawnPerSecond: 0.5
   enemySpawnPadding: 1.5
-  weaponDefinitions: []
-  activeWeaponTypes: 
+  weaponDefinitions:
+  - type: 1
+    letter: B
+    color: {r: 0.9811321, g: 0.29156283, b: 0.29156283, a: 1}
+    projectilePrefab: {fileID: 1385209366576022, guid: 3133a1010341ee44f84984387aacfe31,
+      type: 2}
+    projectileColor: {r: 1, g: 0.25, b: 0.25, a: 1}
+    damageOnHit: 1
+    continuousDamage: 0
+    delayBetweenShots: 0.2
+    velocity: 50
+  - type: 2
+    letter: S
+    color: {r: 0.2775454, g: 0.7369222, b: 0.9339623, a: 1}
+    projectilePrefab: {fileID: 1385209366576022, guid: 3133a1010341ee44f84984387aacfe31,
+      type: 2}
+    projectileColor: {r: 0, g: 0.7367058, b: 1, a: 1}
+    damageOnHit: 1
+    continuousDamage: 0
+    delayBetweenShots: 0.4
+    velocity: 50
+  - type: 6
+    letter: O
+    color: {r: 0.36572328, g: 0.9528302, b: 0.29214135, a: 1}
+    projectilePrefab: {fileID: 0}
+    projectileColor: {r: 1, g: 1, b: 1, a: 1}
+    damageOnHit: 0
+    continuousDamage: 0
+    delayBetweenShots: 0
+    velocity: 0
+  prefabPowerUp: {fileID: 1549703511}
+  powerUpFrequency: 01000000010000000200000006000000
+  activeWeaponTypes: 0100000002000000060000000000000000000000
   ________________: 0
   enemySpawnRate: 0
 --- !u!1001 &621846589
@@ -992,6 +1023,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1665206783}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1838554870
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4337957059798060, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e8520258b265cd4998abc3e80598305, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1859082380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1193,17 @@ Prefab:
       propertyPath: m_Name
       value: Weapon_0
       objectReference: {fileID: 0}
+    - target: {fileID: 114917250742012272, guid: 22028701cbbf75e4cae3ae301c0af5b9,
+        type: 2}
+      propertyPath: ____________________
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114917250742012272, guid: 22028701cbbf75e4cae3ae301c0af5b9,
+        type: 2}
+      propertyPath: def.projectilePrefab
+      value: 
+      objectReference: {fileID: 1385209366576022, guid: 3133a1010341ee44f84984387aacfe31,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22028701cbbf75e4cae3ae301c0af5b9, type: 2}
   m_IsPrefabAsset: 0

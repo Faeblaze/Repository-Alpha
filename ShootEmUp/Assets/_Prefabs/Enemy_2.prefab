@@ -56,6 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4182422435159574}
   - component: {fileID: 54843274328318940}
+  - component: {fileID: 114962946594570640}
   m_Layer: 9
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -277,6 +278,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &114962946594570640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743545225221616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfacdbfc1af81149a6c9e10719e02ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  showDamageForFrames: 2
+  powerUpDropChance: 1
+  ________________: 0
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  boundsCenterOffset: {x: 0, y: 0, z: 0}
+  points: []
+  birthTime: 0
+  lifeTime: 10
+  sinEccentricity: 0.6
 --- !u!135 &135092740262179792
 SphereCollider:
   m_ObjectHideFlags: 1
