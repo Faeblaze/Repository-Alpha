@@ -36,6 +36,6 @@ public class Main : MonoBehaviour
         // Call SpawnEnemy() again in a couple of seconds
         Invoke("SpawnEnemy", enemySpawnRate); // 3
     }
-
+    
 
 }

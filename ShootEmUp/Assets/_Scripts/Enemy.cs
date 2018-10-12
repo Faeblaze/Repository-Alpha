@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             this.transform.position = value;
         }
     }
-    void Awake()
+   void Awake()
     {
         InvokeRepeating("CheckOffscreen", 0f, 2f);
     }

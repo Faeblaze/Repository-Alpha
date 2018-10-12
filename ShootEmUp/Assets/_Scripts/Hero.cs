@@ -46,7 +46,10 @@ public class Hero : MonoBehaviour
             pos -= off;
             transform.position = pos;
         }
-
+        void OntriggerEnter(Collider other)
+        {
+            print("Triggered: " + other.gameObject.name);
+        }
     }
 
 
